@@ -1,0 +1,26 @@
+TAX INVOICE                                   Harrowgate Packaging B.V.
+                                              Havenstraat 26, 9167 RF Rotterdam
+
+Bill to:
+Ostrander Freight Group SA
+14 Avenue de la Gare
+L-1611 Luxembourg
+
+Invoice number: INV-2026-04323        Date of issue: 2026-07-16
+Payment due: 2026-08-15        Your order: PO-06276
+
+Item                                     Qty            Rate      Line total
+Road freight Rotterdam to Luxembourg      11          816.20        8,978.20
+Pallet storage, monthly                    3        1,758.46        5,275.38
+Pallet storage, monthly                    6        1,289.60        7,737.60
+Forklift maintenance                       7          138.96          972.72
+
+                                      Net amount               EUR 22,963.90
+                                      VAT at 21%                EUR 4,822.42
+                                      Amount payable           EUR 27,786.32
+
+Remittance details
+Account name: Harrowgate Packaging B.V.
+IBAN: NL03 VLDB 5305 5203 40    SWIFT/BIC: VLDBNL2U
+Veluwe Deposito Bank
+Company VAT registration NL732332493B01

@@ -1,0 +1,97 @@
+"""Word lists for the made-up documents. Every company, bank and person here is fictional."""
+
+CLIENT = {
+    "name": "Ostrander Freight Group SA",
+    "street": "14 Avenue de la Gare",
+    "city_line": "L-1611 Luxembourg",
+}
+
+LANGUAGE_OF_COUNTRY = {"GB": "en", "IE": "en", "NL": "en", "FR": "fr", "BE": "fr", "DE": "de", "AT": "de"}
+
+VAT_RATES = {"GB": 20, "IE": 23, "NL": 21, "FR": 20, "BE": 21, "DE": 19, "AT": 20}
+
+CURRENCY = {"GB": "GBP"}  # everyone else invoices in EUR
+
+# Fictional banks: country, bank code, BIC, name.
+BANKS = [
+    ("DE", "50210900", "HNKBDEHHXXX", "Hanseatische Kontorbank"),
+    ("DE", "70150800", "ISVBDEMMXXX", "Isarvorland Bank"),
+    ("AT", "19830", "DNLBATWWXXX", "Donauland Bank"),
+    ("AT", "34870", "ALKBAT2SXXX", "Alpenkamm Bank"),
+    ("FR", "30788", "BRVGFRPPXXX", "Banque Rivegauche"),
+    ("FR", "41920", "CVLRFR2LXXX", "Caisse Valrhône"),
+    ("BE", "732", "KMPNBEBBXXX", "Kempenland Bank"),
+    ("BE", "063", "SCHBBE22XXX", "Scheldebank"),
+    ("NL", "ZDKB", "ZDKBNL2AXXX", "Zuiderkust Bank"),
+    ("NL", "VLDB", "VLDBNL2UXXX", "Veluwe Deposito Bank"),
+    ("IE", "SLNB", "SLNBIE2DXXX", "Shannonlee Bank"),
+    ("IE", "LFYB", "LFYBIE2DXXX", "Liffeyside Bank"),
+    ("GB", "THMB", "THMBGB2LXXX", "Thamesmere Bank"),
+    ("GB", "PNBK", "PNBKGB2MXXX", "Penninebrook Bank"),
+]
+
+NAME_PARTS = {
+    "en": {
+        "first": ["Brightmoor", "Ashcombe", "Kestrelford", "Harrowgate", "Millbrook", "Corran", "Whitlock",
+                  "Larchfield", "Penrose", "Thornbury", "Calderbank", "Saltmarsh", "Oakhurst", "Fenwick",
+                  "Redcliffe", "Wexmoor", "Glenmara", "Duncaster"],
+        "sector": ["Logistics", "Packaging", "Facilities", "Consulting", "Freight", "Print & Media",
+                   "IT Services", "Engineering", "Office Supplies", "Security Services", "Warehousing"],
+        "legal": {"GB": ["Ltd", "Limited", "plc"], "IE": ["Ltd", "Limited"], "NL": ["B.V."]},
+    },
+    "fr": {
+        "first": ["Valmont", "Beaurivage", "Cormeilles", "Rochefière", "Saint-Aubert", "Montclairon",
+                  "Bellerive", "Ardoisière", "Chantereine", "Vauclairon", "Hautecombe", "Lumière Rivage",
+                  "Grandpré", "Marcillac"],
+        "sector": ["Transports", "Emballages", "Services", "Conseil", "Imprimerie", "Informatique",
+                   "Nettoyage", "Logistique", "Maintenance", "Fournitures"],
+        "legal": {"FR": ["SAS", "SARL", "S.A."], "BE": ["SA", "SRL"]},
+    },
+    "de": {
+        "first": ["Hallstein", "Lindenau", "Kesselbrink", "Oberwald", "Rheinfeld", "Steinach", "Falkenrath",
+                  "Weidental", "Morgenroth", "Eichberg", "Sonnfeld", "Talheim", "Birkenhain", "Wendlingen"],
+        "sector": ["Maschinenbau", "Logistik", "Verpackung", "Gebäudeservice", "IT-Systeme", "Druckerei",
+                   "Spedition", "Beratung", "Elektrotechnik", "Bürobedarf"],
+        "legal": {"DE": ["GmbH", "AG", "GmbH & Co. KG"], "AT": ["GmbH"]},
+    },
+}
+
+ADDRESSES = {
+    "GB": (["Canal Wharf", "Mill Lane", "Station Road", "Kings Parade", "Harbour Way"],
+           ["Leeds", "Bristol", "Manchester", "Reading", "Glasgow"]),
+    "IE": (["Dock Road", "Merchants Quay", "Fitzwilliam Lane"], ["Dublin", "Cork", "Galway"]),
+    "NL": (["Havenstraat", "Industrieweg", "Stationsplein", "Kanaalkade"], ["Rotterdam", "Utrecht", "Eindhoven"]),
+    "FR": (["rue de la République", "avenue Jean Jaurès", "boulevard Victor Hugo", "rue des Tanneurs",
+            "quai de Saône"], ["Lyon", "Lille", "Nantes", "Bordeaux", "Toulouse"]),
+    "BE": (["rue de la Station", "chaussée de Louvain", "avenue des Arts"], ["Liège", "Namur", "Bruxelles"]),
+    "DE": (["Hauptstraße", "Industriestraße", "Am Hafen", "Bahnhofstraße", "Lindenallee"],
+           ["Hamburg", "Köln", "Stuttgart", "Leipzig", "Hannover"]),
+    "AT": (["Wiener Straße", "Hauptplatz", "Linzer Gasse"], ["Linz", "Graz", "Salzburg"]),
+}
+
+PEOPLE = {
+    "en": ["Hannah Pryce", "Owen Marsh", "Claire Doyle", "Ravi Patel", "Sophie Turnbull", "Liam Keane"],
+    "fr": ["Camille Roussel", "Julien Marchetti", "Élodie Faure", "Nicolas Perrin", "Inès Garnier"],
+    "de": ["Katrin Vogel", "Matthias Brandt", "Lena Hofer", "Tobias Krämer", "Sabine Ostermann"],
+}
+
+LINE_ITEMS = {
+    "en": ["Pallet storage, monthly", "Road freight Rotterdam to Luxembourg", "Office cleaning, monthly",
+           "IT support (hours)", "Printed brochures, 500 copies", "Forklift maintenance", "Packaging material",
+           "Security patrol, night shifts", "Consulting days", "Courier deliveries"],
+    "fr": ["Transport routier Lyon - Luxembourg", "Entretien des locaux", "Assistance informatique (heures)",
+           "Impression de brochures (500 ex.)", "Maintenance chariot élévateur", "Fournitures de bureau",
+           "Journées de conseil", "Emballages cartons", "Gardiennage de nuit", "Livraisons express"],
+    "de": ["Lagerung Paletten, monatlich", "Transport Hamburg - Luxemburg", "Wartung Förderanlage",
+           "IT-Support (Stunden)", "Druck Broschüren (500 Stk.)", "Verpackungsmaterial", "Beratungstage",
+           "Gebäudereinigung, monatlich", "Kurierfahrten", "Elektroprüfung Anlagen"],
+}
+
+MONTH_NAMES = {
+    "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+           "November", "December"],
+    "fr": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre",
+           "novembre", "décembre"],
+    "de": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober",
+           "November", "Dezember"],
+}

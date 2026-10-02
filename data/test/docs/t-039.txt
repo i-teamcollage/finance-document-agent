@@ -1,0 +1,28 @@
+Glenmara Consulting B.V.
+Havenstraat 168
+1906 AG Utrecht
+VAT No: NL813734337B01
+
+INVOICE
+
+Invoice No:     440433
+Invoice Date:   2026-04-27
+Due Date:       2026-05-27
+Customer:       Ostrander Freight Group SA
+                14 Avenue de la Gare, L-1611 Luxembourg
+Customer ref:   PO-82957
+
+Description                              Qty      Unit price          Amount
+Packaging material                         7          270.77        1,895.39
+Pallet storage, monthly                    8        1,083.70        8,669.60
+Consulting days                            3          855.56        2,566.68
+
+                                      Subtotal                 EUR 13,131.67
+                                      VAT 21%                   EUR 2,757.65
+                                      Total due                EUR 15,889.32
+
+Please pay to:
+Bank:       Veluwe Deposito Bank
+IBAN:       NL70 VLDB 6557 2101 41
+BIC:        VLDBNL2UXXX
+Reference:  440433

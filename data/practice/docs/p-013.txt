@@ -1,0 +1,24 @@
+Logistique Hautecombe SA
+154 rue de la Station
+6651 Namur
+N° TVA intracommunautaire : BE0114593186
+
+FACTURE N° 202607-030
+
+Date de facture : 26/07/2026
+Date d'échéance : 09/08/2026
+Client : Ostrander Freight Group SA, 14 Avenue de la Gare, L-1611 Luxembourg
+Votre commande : PO-56213
+
+Désignation                              Qté         P.U. HT      Montant HT
+Gardiennage de nuit                        2          902,12        1 804,24
+
+                                      Total HT                    1 804,24 €
+                                      TVA 21 %                      378,89 €
+                                      Total TTC                   2 183,13 €
+                                      Net à payer                 2 183,13 €
+
+Règlement par virement
+Banque : Kempenland Bank
+IBAN : BE64 7320 1250 3452
+BIC : KMPNBEBBXXX

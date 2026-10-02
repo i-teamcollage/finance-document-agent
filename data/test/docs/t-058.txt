@@ -1,0 +1,30 @@
+Scanned 21/03/2026 18:57  p.1/1
+Saltmarsh IT Services B.V.
+Industrieweg 93
+8085 C8 Utrecht
+VAT No: NL104319554B01
+
+INVOICE
+
+Invoice No:     SI/26/01809 `
+Invoice Date:   07/03/2026
+Payment terms:  45 days net
+Customer: Ostrander Freight Group SA
+                14 Avenue de la Gare, L-1611 Luxembourg
+Customer ref:   PO-50008
+
+Description                              Qty      Unit price          Amount
+Pal1et storage, monthly                    3          905.44        2,716.32
+Office cleaning, monthly                   3        2,283.34        6,850.02
+
+ Subtotal EUR 9,566.34 `
+                                      VAT 21%                   EUR 2,008.93
+ Total due EUR 11,575.27
+
+Please pay to:
+Bank:       Veluwe Deposito Bank
+IBAN:       NL54 VLDB 5272 3817 00
+BIC: VLDBNL2UXXX `
+Reference: SI/26/01809
+
+- 1 -

@@ -1,0 +1,25 @@
+Fournitures Hautecombe SARL
+40 quai de Saône
+86633 Lyon
+N° TVA intracommunautaire : FR18 876334906
+
+FACTURE N° 202602-598
+
+Date de facture : 9 février 2026
+Date d'échéance : 26 mars 2026
+Client : Ostrander Freight Group SA, 14 Avenue de la Gare, L-1611 Luxembourg
+Votre commande : PO-87899
+
+Désignation                              Qté         P.U. HT      Montant HT
+Emballages cartons                         9        1 698,04       15 282,36
+Fournitures de bureau                     10          317,13        3 171,30
+
+                                      Total HT                 18 453,66 EUR
+                                      TVA 20 %                  3 690,73 EUR
+                                      Total TTC                22 144,39 EUR
+                                      Net à payer              22 144,39 EUR
+
+Règlement par virement
+Banque : Caisse Valrhône
+IBAN : FR76 4192 0124 5995 6823 0751 548
+BIC : CVLRFR2LXXX

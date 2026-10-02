@@ -1,0 +1,26 @@
+TAX INVOICE                                   Kestrelford Security Services B.V.
+                                              Industrieweg 105, 8748 FV Eindhoven
+
+Bill to:
+Ostrander Freight Group SA
+14 Avenue de la Gare
+L-1611 Luxembourg
+
+Invoice number: SI/26/09057        Date of issue: 06 Aug 2026
+Payment due: 20 Aug 2026        Your order: PO-90496
+
+Item                                     Qty            Rate      Line total
+Packaging material                         7        1,024.42        7,170.94
+Security patrol, night shifts              6        2,139.38       12,836.28
+Pallet storage, monthly                   10        1,978.60       19,786.00
+Printed brochures, 500 copies             11        1,116.16       12,277.76
+
+                                      Net amount               EUR 52,070.98
+                                      VAT at 21%               EUR 10,934.91
+                                      Amount payable           EUR 63,005.89
+
+Remittance details
+Account name: Kestrelford Security Services B.V.
+IBAN: NL35ZDKB6201913274    SWIFT/BIC: ZDKBNL2AXXX
+Zuiderkust Bank
+Company VAT registration NL978464936B01

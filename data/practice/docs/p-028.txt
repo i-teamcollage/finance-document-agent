@@ -1,0 +1,29 @@
+Scanned 17/08/2026 10:32  p.1/1
+Calderbank Office Supplies Limited
+81 Dock Road `
+Dublin, Ireland ·
+VAT No: IE3380141E
+
+INVOICE
+
+Invoice No: INV269163
+Invoice Date:   13 August 2026
+Payment terms:  14 days net
+Customer:       Ostrander Freight Group SA
+                14 Avenue de la Gare, L-l611 Luxembourg
+Customer ref:   PO-86626
+
+Description                              Qty      Unit price          Amount
+Forklift maintenance 8 1,096.99 8,775.92
+
+                                      Subtotal                  EUR 8,775.92
+                                      VAT 23%                   EUR 2,018.46
+                                      Total due                EUR 10,794.38 '
+
+Please pay to:
+Bank:       Shannonlee Bank
+IBAN:       IE31 SLNB 0718 8181 7414 33
+BIC:        SLNBIE2DXXX
+Reference: INV269163
+
+- 1 -

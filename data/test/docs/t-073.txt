@@ -1,0 +1,23 @@
+TAX INVOICE                                   Calderbank Office Supplies Limited
+                                              81 Dock Road, Dublin, Ireland
+
+Bill to:
+Ostrander Freight Group SA
+14 Avenue de la Gare
+L-1611 Luxembourg
+
+Invoice number: SI/26/03409        Date of issue: 2026-09-15
+Payment due: 2026-09-29        Your order: PO-59215
+
+Item                                     Qty            Rate      Line total
+Printed brochures, 500 copies              4        1,416.28        5,665.12
+
+                                      Net amount                EUR 5,665.12
+                                      VAT at 23%                EUR 1,302.98
+                                      Amount payable            EUR 6,968.10
+
+Remittance details
+Account name: Calderbank Office Supplies Limited
+IBAN: IE31SLNB07188181741433    SWIFT/BIC: SLNBIE2DXXX
+Shannonlee Bank
+Company VAT registration IE3380141E

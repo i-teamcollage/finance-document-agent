@@ -1,0 +1,26 @@
+TAX INVOICE                                   Redcliffe Office Supplies Ltd
+                                              85 Canal Wharf, Reading JR17 9ST
+
+Bill to:
+Ostrander Freight Group SA
+14 Avenue de la Gare
+L-1611 Luxembourg
+
+Invoice number: SI/26/08305        Date of issue: 2026-04-12
+Payment due: 2026-06-11        Your order: PO-68789
+
+Item                                     Qty            Rate      Line total
+Road freight Rotterdam to Luxembourg      12        1,032.11       12,385.32
+Pallet storage, monthly                    8        1,153.79        9,230.32
+Courier deliveries                         1        2,061.18        2,061.18
+Office cleaning, monthly                   6          113.93          683.58
+
+                                      Net amount               GBP 24,360.40
+                                      VAT at 20%                GBP 4,872.08
+                                      Amount payable           GBP 29,232.48
+
+Remittance details
+Account name: Redcliffe Office Supplies Ltd
+IBAN: GB41 THMB 4264 6288 9751 40    SWIFT/BIC: THMBGB2L
+Thamesmere Bank
+Company VAT registration GB 384 8372 61

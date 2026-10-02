@@ -1,0 +1,39 @@
+# Acceptance test for the finance document agent.
+# Written before the agent was built (design spec, 2026-10-02). Never lowered to make a run pass.
+
+title = "Finance document agent: acceptance test"
+
+[[criteria]]
+id = "bank_auto_precision"
+label = "Bank details accepted automatically that are correct"
+metric = "bank_auto_precision"
+op = ">="
+target = 0.99
+
+[[criteria]]
+id = "field_auto_precision"
+label = "All fields accepted automatically that are correct"
+metric = "field_auto_precision"
+op = ">="
+target = 0.98
+
+[[criteria]]
+id = "field_recall"
+label = "Fields found correctly, whether accepted or sent to review"
+metric = "field_recall"
+op = ">="
+target = 0.95
+
+[[criteria]]
+id = "straight_through"
+label = "Documents fully processed with no human touch"
+metric = "straight_through"
+op = ">="
+target = 0.70
+
+[[criteria]]
+id = "trap_review"
+label = "Trap documents sent to review"
+metric = "trap_review"
+op = "=="
+target = 1.0

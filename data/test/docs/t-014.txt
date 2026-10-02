@@ -1,0 +1,25 @@
+TAX INVOICE                                   Glenmara Consulting B.V.
+                                              Havenstraat 168, 1906 AG Utrecht
+
+Bill to:
+Ostrander Freight Group SA
+14 Avenue de la Gare
+L-1611 Luxembourg
+
+Invoice number: INV268247        Date of issue: 2026-06-01
+Payment due: 2026-06-15        Your order: PO-16719
+
+Item                                     Qty            Rate      Line total
+Pallet storage, monthly                   11        2,245.79       24,703.69
+Printed brochures, 500 copies              5        1,677.35        8,386.75
+Security patrol, night shifts             10          126.56        1,265.60
+
+                                      Net amount               EUR 34,356.04
+                                      VAT at 21%                EUR 7,214.77
+                                      Amount payable           EUR 41,570.81
+
+Remittance details
+Account name: Glenmara Consulting B.V.
+IBAN: NL70 VLDB 6557 2101 41    SWIFT/BIC: VLDBNL2UXXX
+Veluwe Deposito Bank
+Company VAT registration NL813734337B01

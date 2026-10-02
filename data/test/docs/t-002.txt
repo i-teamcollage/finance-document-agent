@@ -1,0 +1,23 @@
+                                            Talheim IT-Systeme GmbH & Co. KG
+                                            Industriestraße 37
+                                            13315 Hamburg
+
+An: Ostrander Freight Group SA, 14 Avenue de la Gare, L-1611 Luxemburg
+
+Rechnung Nr. RE-2026-3340
+Datum: 12. Februar 2026
+Zahlbar bis: 26. Februar 2026
+Bestellnummer: PO-52357
+
+Leistung                               Menge           Preis          Betrag
+IT-Support (Stunden)                      12        1.911,43       22.937,16
+Verpackungsmaterial                        1          547,74          547,74
+Kurierfahrten                              9        1.169,62       10.526,58
+
+                                      Summe netto              EUR 34.011,48
+                                      MwSt. 19 %                EUR 6.462,18
+                                      Gesamtbetrag             EUR 40.473,66
+
+Empfänger: Talheim IT-Systeme GmbH & Co. KG
+Kreditinstitut: Hanseatische Kontorbank
+IBAN DE21 5021 0900 7022 6407 95  ·  BIC HNKBDEHH

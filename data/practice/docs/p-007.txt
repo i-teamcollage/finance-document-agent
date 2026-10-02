@@ -1,0 +1,29 @@
+Scanned 20/08/2026 09:24  p.1/1
+Calderbank Print & Media plc
+129 Station Road
+Glasgow CC9 8YC
+VAT No: GB 049 7465 07
+
+1NVOICE '
+
+Invoice No:     INV268215
+Invoice Date:   2026-08-05 ,
+Due Date: 2026-09-19
+Customer: Ostrander Freight Group SA
+                14 Avenue de la Gare, L-1611 Luxembourg
+Customer ref:   PO-23840
+
+Description Qty Unit price Amount
+Forklift maintenance                      12        1,638.13       19,657.56
+
+                                      Subtotal                    £19,657.56
+                                      VAT 20%                      £3,931.51
+                                      Total due                   £23,589.07 `
+
+Please pay to:
+8ank:       Penninebrook Bank
+IBAN:       GB04 PNBK 6661 7603 1372 15
+BIC:        PNBKGB2MXXX
+Reference: INV268215
+
+- 1 -

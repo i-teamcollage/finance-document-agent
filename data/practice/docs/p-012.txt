@@ -1,0 +1,26 @@
+Scanned 31/07/2026 13:52  p.1/1
+TAX INVOICE                                   Oakhurst Packaging Ltd
+ 76 Fitzwilliam Lane, Dublin, Ireland
+
+Bill to:
+Ostrander Freight Group SA '
+14 Avenue de la Gare
+L-1611 Luxembourg
+
+Invoice number: INV-2026-01914        Date of issue: 25 Jul 2026
+Payment due: 08 Sep 2026        Your order: PO-30030
+
+Item                                     Qty            Rate      Line total '
+IT support (hours)                         4        1,284.74        5,138.96
+
+                                      Net amount                EUR 5,l38.96
+                                      VAT at 23%                EUR 1,181.96
+ Amount payable EUR 6,320.92 '
+
+Remittance details
+Account name: Oakhurst Packaging Ltd
+IBAN: IE27 LFYB 5762 8331 2581 53    SWIFT/BIC: LFYBIE2DXXX
+Liffeyside Bank
+Company VAT registration IE04104Z3J
+
+- 1 -

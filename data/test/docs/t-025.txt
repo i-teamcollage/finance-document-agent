@@ -1,0 +1,28 @@
+Saltmarsh Facilities plc
+109 Mill Lane
+Manchester KA16 8FC
+VAT No: GB 223 7243 65
+
+INVOICE
+
+Invoice No:     INV-2026-01592
+Invoice Date:   2026-08-23
+Due Date:       2026-10-07
+Customer:       Ostrander Freight Group SA
+                14 Avenue de la Gare, L-1611 Luxembourg
+Customer ref:   PO-25535
+
+Description                              Qty      Unit price          Amount
+Office cleaning, monthly                   6        2,265.48       13,592.88
+IT support (hours)                         6        1,841.70       11,050.20
+Office cleaning, monthly                   1          982.05          982.05
+
+                                      Subtotal                 GBP 25,625.13
+                                      VAT 20%                   GBP 5,125.03
+                                      Total due                GBP 30,750.16
+
+Please pay to:
+Bank:       Penninebrook Bank
+IBAN:       GB96 PNBK 9164 0371 1009 91
+BIC:        PNBKGB2M
+Reference:  INV-2026-01592

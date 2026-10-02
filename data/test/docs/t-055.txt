@@ -1,0 +1,23 @@
+TAX INVOICE                                   Kestrelford Warehousing Ltd
+                                              124 Kings Parade, Bristol PX11 2NR
+
+Bill to:
+Ostrander Freight Group SA
+14 Avenue de la Gare
+L-1611 Luxembourg
+
+Invoice number: 162223        Date of issue: 25 Feb 2026
+Terms: 14 days net        Your order: PO-65807
+
+Item                                     Qty            Rate      Line total
+Courier deliveries                         2        1,329.10        2,658.20
+
+                                      Net amount                GBP 2,658.20
+                                      VAT at 20%                  GBP 531.64
+                                      Amount payable            GBP 3,189.84
+
+Remittance details
+Account name: Kestrelford Warehousing Ltd
+IBAN: GB24THMB58887180334018    SWIFT/BIC: THMBGB2LXXX
+Thamesmere Bank
+Company VAT registration GB 612 2202 97

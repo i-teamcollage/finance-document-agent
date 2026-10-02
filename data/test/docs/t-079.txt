@@ -1,0 +1,24 @@
+TAX INVOICE                                   Saltmarsh Freight Ltd
+                                              107 Dock Road, Galway, Ireland
+
+Bill to:
+Ostrander Freight Group SA
+14 Avenue de la Gare
+L-1611 Luxembourg
+
+Invoice number: SI/26/08933        Date of issue: 27/03/2026
+Payment due: 26/04/2026        Your order: PO-08291
+
+Item                                     Qty            Rate      Line total
+Pallet storage, monthly                    9        2,299.57       20,696.13
+Forklift maintenance                       8        1,823.81       14,590.48
+
+                                      Net amount                  €35,286.61
+                                      VAT at 23%                   €8,115.92
+                                      Amount payable              €43,402.53
+
+Remittance details
+Account name: Saltmarsh Freight Ltd
+IBAN: IE12 LFYB 3643 9008 4745 37    SWIFT/BIC: LFYBIE2D
+Liffeyside Bank
+Company VAT registration IE9528831J

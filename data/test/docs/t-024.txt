@@ -1,0 +1,26 @@
+Oakhurst Packaging Ltd
+76 Fitzwilliam Lane
+Dublin, Ireland
+VAT No: IE0410423J
+
+INVOICE
+
+Invoice No:     595510
+Invoice Date:   29 Jul 2026
+Payment terms:  60 days net
+Customer:       Ostrander Freight Group SA
+                14 Avenue de la Gare, L-1611 Luxembourg
+Customer ref:   PO-56272
+
+Description                              Qty      Unit price          Amount
+Forklift maintenance                       4          689.04        2,756.16
+
+                                      Subtotal                     €2,756.16
+                                      VAT 23%                        €633.92
+                                      Total due                    €3,390.08
+
+Please pay to:
+Bank:       Liffeyside Bank
+IBAN:       IE27 LFYB 5762 8331 2581 53
+BIC:        LFYBIE2DXXX
+Reference:  595510

@@ -1,0 +1,26 @@
+Logistique Ardoisière S.A.
+61 boulevard Victor Hugo
+53785 Toulouse
+N° TVA intracommunautaire : FR44 643114367
+
+FACTURE N° 202607-985
+
+Date de facture : 10 juillet 2026
+Date d'échéance : 9 août 2026
+Client : Ostrander Freight Group SA, 14 Avenue de la Gare, L-1611 Luxembourg
+Votre commande : PO-41524
+
+Désignation                              Qté         P.U. HT      Montant HT
+Transport routier Lyon - Luxembourg        5        1 052,56        5 262,80
+Livraisons express                         5        2 353,59       11 767,95
+Impression de brochures (500 ex.)          5           77,85          389,25
+
+                                      Total HT                 17 420,00 EUR
+                                      TVA 20 %                  3 484,00 EUR
+                                      Total TTC                20 904,00 EUR
+                                      Net à payer              20 904,00 EUR
+
+Règlement par virement
+Banque : Banque Rivegauche
+IBAN : FR7630788541636246770968239
+BIC : BRVGFRPPXXX

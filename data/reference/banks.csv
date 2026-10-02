@@ -1,0 +1,15 @@
+country,bank_code,bic,name
+DE,50210900,HNKBDEHHXXX,Hanseatische Kontorbank
+DE,70150800,ISVBDEMMXXX,Isarvorland Bank
+AT,19830,DNLBATWWXXX,Donauland Bank
+AT,34870,ALKBAT2SXXX,Alpenkamm Bank
+FR,30788,BRVGFRPPXXX,Banque Rivegauche
+FR,41920,CVLRFR2LXXX,Caisse Valrhône
+BE,732,KMPNBEBBXXX,Kempenland Bank
+BE,063,SCHBBE22XXX,Scheldebank
+NL,ZDKB,ZDKBNL2AXXX,Zuiderkust Bank
+NL,VLDB,VLDBNL2UXXX,Veluwe Deposito Bank
+IE,SLNB,SLNBIE2DXXX,Shannonlee Bank
+IE,LFYB,LFYBIE2DXXX,Liffeyside Bank
+GB,THMB,THMBGB2LXXX,Thamesmere Bank
+GB,PNBK,PNBKGB2MXXX,Penninebrook Bank

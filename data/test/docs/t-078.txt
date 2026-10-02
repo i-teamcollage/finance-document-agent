@@ -1,0 +1,24 @@
+Logistique Hautecombe SA
+154 rue de la Station
+6651 Namur
+N° TVA intracommunautaire : BE0114593186
+
+FACTURE N° 202602-837
+
+Date de facture : 25/02/2026
+Conditions de paiement : à 45 jours
+Client : Ostrander Freight Group SA, 14 Avenue de la Gare, L-1611 Luxembourg
+Votre commande : PO-19421
+
+Désignation                              Qté         P.U. HT      Montant HT
+Livraisons express                         5          276,83        1 384,15
+
+                                      Total HT                  1 384,15 EUR
+                                      TVA 21 %                    290,67 EUR
+                                      Total TTC                 1 674,82 EUR
+                                      Net à payer               1 674,82 EUR
+
+Règlement par virement
+Banque : Kempenland Bank
+IBAN : BE64 7320 1250 3452
+BIC : KMPNBEBBXXX
