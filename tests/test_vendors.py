@@ -2,9 +2,27 @@ from finance_document_agent.vendors import VendorMaster, normalize_name
 
 MASTER = VendorMaster(
     [
-        {"vendor_id": "V001", "name": "Brightmoor Logistics Ltd", "country": "GB", "iban": "GB29NWBK60161331926819", "bic": "NWBKGB2LXXX"},
-        {"vendor_id": "V002", "name": "Société Lumière Rivage SAS", "country": "FR", "iban": "FR1420041010050500013M02606", "bic": "PSSTFRPPXXX"},
-        {"vendor_id": "V003", "name": "Hallstein Maschinenbau GmbH", "country": "DE", "iban": "DE89370400440532013000", "bic": "COBADEFFXXX"},
+        {
+            "vendor_id": "V001",
+            "name": "Brightmoor Logistics Ltd",
+            "country": "GB",
+            "iban": "GB29NWBK60161331926819",
+            "bic": "NWBKGB2LXXX",
+        },
+        {
+            "vendor_id": "V002",
+            "name": "Société Lumière Rivage SAS",
+            "country": "FR",
+            "iban": "FR1420041010050500013M02606",
+            "bic": "PSSTFRPPXXX",
+        },
+        {
+            "vendor_id": "V003",
+            "name": "Hallstein Maschinenbau GmbH",
+            "country": "DE",
+            "iban": "DE89370400440532013000",
+            "bic": "COBADEFFXXX",
+        },
     ]
 )
 

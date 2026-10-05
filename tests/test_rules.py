@@ -50,4 +50,4 @@ def test_description_for_the_prompt_says_when_nothing_was_found():
 
 def test_description_shows_each_reading():
     text = describe(find_candidates(FRENCH))
-    assert "30 446,84 € = 30446.84 EUR" in text.replace(" ", " ")
+    assert "30 446,84 € = 30446.84 EUR" in text.replace("\u202f", " ")

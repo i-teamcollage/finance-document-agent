@@ -75,7 +75,12 @@ def ollama_transport(host: str | None = None) -> Transport:
         base = f"http://{base}"
 
     def send(request: dict[str, Any]) -> dict[str, Any]:
-        body = {"model": request["model"], "messages": request["messages"], "stream": False, "options": request["options"]}
+        body = {
+            "model": request["model"],
+            "messages": request["messages"],
+            "stream": False,
+            "options": request["options"],
+        }
         for key in ("format", "tools"):
             if key in request:
                 body[key] = request[key]

@@ -39,7 +39,7 @@ class FieldResult:
 
 
 def _squash(text: str) -> str:
-    return re.sub(r"\s+", " ", text.replace(" ", " ").replace(" ", " ")).strip()
+    return re.sub(r"\s+", " ", text.replace("\u00a0", " ").replace("\u202f", " ")).strip()
 
 
 def _quote_found(quote: str | None, text: str) -> bool:
@@ -239,7 +239,9 @@ def _iban(
     if refs.directory.bic_for(value) is None:
         check.problem("bank not in the bank directory")
     if vendor is not None and normalize_iban(vendor["iban"]) != value:
-        check.reasons.insert(0, "differs from the account in the vendor master: possible payment diversion, confirm by phone")
+        check.reasons.insert(
+            0, "differs from the account in the vendor master: possible payment diversion, confirm by phone"
+        )
     elif new_counterparty:
         check.problem("new counterparty: bank details not verified")
     return check.result(value)

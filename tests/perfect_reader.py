@@ -7,14 +7,26 @@ import json
 import re
 from pathlib import Path
 
-CONFUSIONS = {"0": "O", "O": "0", "1": "l", "l": "1", "I": "1", "5": "S", "S": "5", "8": "B", "B": "8", "2": "Z", "Z": "2"}
+CONFUSIONS = {
+    "0": "O",
+    "O": "0",
+    "1": "l",
+    "l": "1",
+    "I": "1",
+    "5": "S",
+    "S": "5",
+    "8": "B",
+    "B": "8",
+    "2": "Z",
+    "Z": "2",
+}
 
 
 def _pattern(printed: str) -> str:
     parts = []
     for ch in printed:
         if ch == " ":
-            parts.append(r"[   ]+")
+            parts.append(r"[ \u00a0\u202f]+")
         elif ch in CONFUSIONS:
             parts.append("[" + re.escape(ch + CONFUSIONS[ch]) + "]")
         else:
@@ -46,5 +58,13 @@ class PerfectReader:
             elif field in ("document_date", "due_date"):
                 answer[field] = {"value": truth, "quote": quote}
             else:
-                answer[field] = {"value": re.sub(r"\s+", "", quote) if field in ("iban", "bic") and quote else quote, "quote": quote}
-        return {"content": json.dumps(answer, ensure_ascii=False), "tool_calls": [], "prompt_tokens": 1500, "output_tokens": 220}
+                answer[field] = {
+                    "value": re.sub(r"\s+", "", quote) if field in ("iban", "bic") and quote else quote,
+                    "quote": quote,
+                }
+        return {
+            "content": json.dumps(answer, ensure_ascii=False),
+            "tool_calls": [],
+            "prompt_tokens": 1500,
+            "output_tokens": 220,
+        }

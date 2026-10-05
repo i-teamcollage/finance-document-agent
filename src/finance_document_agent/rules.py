@@ -12,7 +12,9 @@ from .banking import IBAN_FORMATS, bic11, normalize_iban
 from .parsing import find_amounts, find_dates
 
 _IBAN = re.compile(r"\b[A-Z]{2}[0-9OoIlSBZ]{2}(?: ?[A-Za-z0-9]{4}){2,7}(?: ?[A-Za-z0-9]{1,4})?\b")
-_BIC = re.compile(r"(?:B[I1l]C|SW[I1l]FT)(?:\s*/\s*(?:B[I1l]C|SW[I1l]FT))?(?:-Code)?\s*:?\s*([A-Z0-9]{8}(?:[A-Z0-9]{3})?)\b")
+_BIC = re.compile(
+    r"(?:B[I1l]C|SW[I1l]FT)(?:\s*/\s*(?:B[I1l]C|SW[I1l]FT))?(?:-Code)?\s*:?\s*([A-Z0-9]{8}(?:[A-Z0-9]{3})?)\b"
+)
 _DOC_NUMBER = re.compile(
     r"(?:Invoice No|Invoice number|Agreement No\.?|Our reference|Facture n°|FACTURE N°|Contrat n°|notre réf\.?"
     r"|Rechnungsnummer|Rechnung Nr\.|Vertrag Nr\.|unser Zeichen)\s*:?\s*([A-Z0-9][A-Za-z0-9/\-.]{2,30})",

@@ -1,10 +1,10 @@
 """Command line.
 
-    python -m finance_document_agent demo              three examples from the stored run
-    python -m finance_document_agent accept            the acceptance test on the test split
-    python -m finance_document_agent accept --record   run it live on Ollama and store the run
-    python -m finance_document_agent run FILE          read one document live
-    python -m finance_document_agent readme            refresh the results table in README.md
+python -m finance_document_agent demo              three examples from the stored run
+python -m finance_document_agent accept            the acceptance test on the test split
+python -m finance_document_agent accept --record   run it live on Ollama and store the run
+python -m finance_document_agent run FILE          read one document live
+python -m finance_document_agent readme            refresh the results table in README.md
 """
 
 from __future__ import annotations
@@ -18,7 +18,15 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from .acceptance import all_passed, evaluate, load_criteria, report_dict, results_block, terminal_table, update_readme, write_reports
+from .acceptance import (
+    evaluate,
+    load_criteria,
+    report_dict,
+    results_block,
+    terminal_table,
+    update_readme,
+    write_reports,
+)
 from .banking import BankDirectory
 from .checks import References
 from .llm import DEFAULT_MODEL, LLM, ModelUnavailable, ReplayMiss, machine_description, ollama_info, run_dir_name

@@ -1,12 +1,12 @@
 import json
 
+from test_checks import GOOD, REFS, TEXT
+
 from finance_document_agent.extract import SCHEMA, build_messages
 from finance_document_agent.llm import LLM
 from finance_document_agent.pipeline import process
 from finance_document_agent.rules import find_candidates
 from finance_document_agent.schema import validate
-
-from test_checks import GOOD, REFS, TEXT
 
 
 class ScriptedModel:

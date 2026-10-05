@@ -50,7 +50,8 @@ If a field is not in the document, use null for both.
 Fields:
 - counterparty: the company that issued the document and is to be paid. Never Ostrander Freight Group SA.
 - document_number: the invoice number, payment request reference or agreement number.
-- document_date: the date the document was issued or the agreement was signed, as YYYY-MM-DD. Not the date a page was scanned.
+- document_date: the date the document was issued or the agreement was signed, as YYYY-MM-DD. \
+Not the date a page was scanned.
 - due_date: the date payment is due, as YYYY-MM-DD. If the document gives payment terms instead of a date \
 (for example "30 days net"), add that many days to the document date and quote the terms.
 - amount: the amount to pay now, including VAT: the invoice total, the requested amount, or the first \

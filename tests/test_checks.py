@@ -12,8 +12,15 @@ REFS = References(
         ]
     ),
     vendors=VendorMaster(
-        [{"vendor_id": "V003", "name": "Hallstein Maschinenbau GmbH", "country": "DE",
-          "iban": "DE89370400440532013000", "bic": "COBADEFFXXX"}]
+        [
+            {
+                "vendor_id": "V003",
+                "name": "Hallstein Maschinenbau GmbH",
+                "country": "DE",
+                "iban": "DE89370400440532013000",
+                "bic": "COBADEFFXXX",
+            }
+        ]
     ),
 )
 
@@ -107,7 +114,9 @@ def test_totals_that_do_not_add_up_go_to_review():
 
 
 def test_two_different_totals_go_to_review():
-    text = TEXT.replace("Bankverbindung", "                                      Gesamtbetrag             1.200,00 €\n\nBankverbindung")
+    text = TEXT.replace(
+        "Bankverbindung", "                                      Gesamtbetrag             1.200,00 €\n\nBankverbindung"
+    )
     results = run(text)
     assert results["amount"].status == "review"
     assert "two different totals" in results["amount"].reasons[0]

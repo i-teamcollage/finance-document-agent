@@ -19,9 +19,7 @@ def label(doc_id, trap=None, review_field=None):
 
 def result(doc_id, statuses=None, values=None):
     statuses, values = statuses or {}, values or {}
-    fields = {
-        name: FieldResult(name, values.get(name, TRUTH[name]), statuses.get(name, "auto")) for name in TRUTH
-    }
+    fields = {name: FieldResult(name, values.get(name, TRUTH[name]), statuses.get(name, "auto")) for name in TRUTH}
     return DocumentResult(doc_id, fields, all(f.status == "auto" for f in fields.values()), 10.0)
 
 

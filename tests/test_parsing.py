@@ -66,7 +66,7 @@ def test_english_amount():
 
 
 def test_french_amount_with_a_narrow_space():
-    assert parse_amount("12 345,67 EUR") == (Decimal("12345.67"), "EUR")
+    assert parse_amount("12\u202f345,67 EUR") == (Decimal("12345.67"), "EUR")
 
 
 def test_pounds():

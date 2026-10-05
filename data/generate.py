@@ -53,8 +53,24 @@ TRAP_FIELD = {
     "total_mismatch": "amount",
     "due_before_issue": "due_date",
 }
-VENDOR_COUNTRIES = {"en": [("GB", 6), ("IE", 4), ("NL", 5)], "fr": [("FR", 10), ("BE", 5)], "de": [("DE", 10), ("AT", 5)]}
-OCR_CONFUSIONS = {"0": "O", "O": "0", "1": "l", "l": "1", "I": "1", "5": "S", "S": "5", "8": "B", "B": "8", "2": "Z", "Z": "2"}
+VENDOR_COUNTRIES = {
+    "en": [("GB", 6), ("IE", 4), ("NL", 5)],
+    "fr": [("FR", 10), ("BE", 5)],
+    "de": [("DE", 10), ("AT", 5)],
+}
+OCR_CONFUSIONS = {
+    "0": "O",
+    "O": "0",
+    "1": "l",
+    "l": "1",
+    "I": "1",
+    "5": "S",
+    "S": "5",
+    "8": "B",
+    "B": "8",
+    "2": "Z",
+    "Z": "2",
+}
 CENT = Decimal("0.01")
 
 
@@ -171,14 +187,20 @@ def scan_noise(text: str, issued: date, lang: str, rng: random.Random) -> str:
         lines[index] += rng.choice([" '", " `", " ·", " ,"])
     scanned = issued + timedelta(days=rng.randint(2, 20))
     header = {"en": "Scanned", "fr": "Numérisé le", "de": "Gescannt am"}[lang]
-    return f"{header} {fmt_date(scanned, lang, 0)} {rng.randint(7, 18):02d}:{rng.randint(0, 59):02d}  p.1/1\n" + "\n".join(lines) + "\n- 1 -\n"
+    return (
+        f"{header} {fmt_date(scanned, lang, 0)} {rng.randint(7, 18):02d}:{rng.randint(0, 59):02d}  p.1/1\n"
+        + "\n".join(lines)
+        + "\n- 1 -\n"
+    )
 
 
 def _money(value: Decimal) -> Decimal:
     return value.quantize(CENT, rounding=ROUND_HALF_UP)
 
 
-def make_document(rng: random.Random, doc_id: str, lang: str, kind: str, vendor: dict, plan: dict, reference: dict) -> dict:
+def make_document(
+    rng: random.Random, doc_id: str, lang: str, kind: str, vendor: dict, plan: dict, reference: dict
+) -> dict:
     banks = reference["banks"]
     country = vendor["country"]
     currency = CURRENCY.get(country, "EUR")
@@ -369,7 +391,11 @@ def main() -> int:
     args = parser.parse_args()
     files = all_files()
     if args.check:
-        stale = [path for path, content in files.items() if not (HERE / path).exists() or (HERE / path).read_text(encoding="utf-8") != content]
+        stale = [
+            path
+            for path, content in files.items()
+            if not (HERE / path).exists() or (HERE / path).read_text(encoding="utf-8") != content
+        ]
         for path in stale:
             print(f"differs: data/{path}")
         print("data is up to date" if not stale else f"{len(stale)} file(s) differ: run `make data`")

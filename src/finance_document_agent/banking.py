@@ -38,13 +38,21 @@ BANK_CODE_SLICES = {
 
 # What a scanner typically reads instead of the real character, reversed: noisy -> possible originals.
 OCR_ORIGINALS = {
-    "O": "0", "Q": "0", "D": "0",
-    "I": "1", "L": "1",
+    "O": "0",
+    "Q": "0",
+    "D": "0",
+    "I": "1",
+    "L": "1",
     "Z": "2",
     "S": "5",
     "G": "6",
     "B": "8",
-    "0": "OD", "1": "IL", "2": "Z", "5": "S", "6": "G", "8": "B",
+    "0": "OD",
+    "1": "IL",
+    "2": "Z",
+    "5": "S",
+    "6": "G",
+    "8": "B",
 }
 
 _BIC = re.compile(r"[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}([A-Z0-9]{3})?")

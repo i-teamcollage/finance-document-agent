@@ -2,9 +2,9 @@ import json
 import shutil
 from pathlib import Path
 
-from finance_document_agent.cli import main
-
 from perfect_reader import PerfectReader
+
+from finance_document_agent.cli import main
 
 REPO = Path(__file__).resolve().parents[1]
 README = "# Sample\n\n<!-- results:start -->\nnot yet measured\n<!-- results:end -->\n"
@@ -41,7 +41,15 @@ def test_review_queue_lists_every_field_sent_to_a_person(tmp_path):
     assert queue[0] == "doc_id,field,value,reason,suggestion"
     assert len(queue) > 1
     result = json.loads((root / "out" / "test" / "t-001.json").read_text(encoding="utf-8"))
-    assert set(result["fields"]) == {"counterparty", "document_number", "document_date", "due_date", "amount", "iban", "bic"}
+    assert set(result["fields"]) == {
+        "counterparty",
+        "document_number",
+        "document_date",
+        "due_date",
+        "amount",
+        "iban",
+        "bic",
+    }
 
 
 def test_readme_block_follows_the_report_and_check_mode_detects_drift(tmp_path):

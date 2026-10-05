@@ -12,23 +12,75 @@ _TO_DIGITS = str.maketrans({"O": "0", "o": "0", "I": "1", "l": "1", "|": "1", "S
 
 MONTHS = {
     # English
-    "january": 1, "jan": 1, "february": 2, "feb": 2, "march": 3, "mar": 3, "april": 4, "apr": 4, "may": 5,
-    "june": 6, "jun": 6, "july": 7, "jul": 7, "august": 8, "aug": 8, "september": 9, "sep": 9, "sept": 9,
-    "october": 10, "oct": 10, "november": 11, "nov": 11, "december": 12, "dec": 12,
+    "january": 1,
+    "jan": 1,
+    "february": 2,
+    "feb": 2,
+    "march": 3,
+    "mar": 3,
+    "april": 4,
+    "apr": 4,
+    "may": 5,
+    "june": 6,
+    "jun": 6,
+    "july": 7,
+    "jul": 7,
+    "august": 8,
+    "aug": 8,
+    "september": 9,
+    "sep": 9,
+    "sept": 9,
+    "october": 10,
+    "oct": 10,
+    "november": 11,
+    "nov": 11,
+    "december": 12,
+    "dec": 12,
     # French
-    "janvier": 1, "janv": 1, "février": 2, "fevrier": 2, "févr": 2, "mars": 3, "avril": 4, "avr": 4,
-    "mai": 5, "juin": 6, "juillet": 7, "juil": 7, "août": 8, "aout": 8, "septembre": 9, "octobre": 10,
-    "novembre": 11, "décembre": 12, "decembre": 12, "déc": 12,
+    "janvier": 1,
+    "janv": 1,
+    "février": 2,
+    "fevrier": 2,
+    "févr": 2,
+    "mars": 3,
+    "avril": 4,
+    "avr": 4,
+    "mai": 5,
+    "juin": 6,
+    "juillet": 7,
+    "juil": 7,
+    "août": 8,
+    "aout": 8,
+    "septembre": 9,
+    "octobre": 10,
+    "novembre": 11,
+    "décembre": 12,
+    "decembre": 12,
+    "déc": 12,
     # German
-    "januar": 1, "februar": 2, "märz": 3, "maerz": 3, "mär": 3, "juni": 6, "juli": 7, "oktober": 10,
-    "okt": 10, "dezember": 12, "dez": 12,
+    "januar": 1,
+    "februar": 2,
+    "märz": 3,
+    "maerz": 3,
+    "mär": 3,
+    "juni": 6,
+    "juli": 7,
+    "oktober": 10,
+    "okt": 10,
+    "dezember": 12,
+    "dez": 12,
 }
 _MONTH = "|".join(sorted((re.escape(name) for name in MONTHS), key=len, reverse=True))
 
 _DATE_PATTERNS = [
     ("ymd", re.compile(rf"(?<![0-9])({_D}{{4}})-({_D}{{2}})-({_D}{{2}})(?![0-9])")),
     ("dmy", re.compile(rf"(?<![0-9A-Za-z])({_D}{{1,2}})[./]({_D}{{1,2}})[./]({_D}{{4}})(?![0-9])")),
-    ("d_month_y", re.compile(rf"(?<![0-9A-Za-z])({_D}{{1,2}})(?:st|nd|rd|th|er|\.)?\s+({_MONTH})\.?\s+({_D}{{4}})(?![0-9])", re.I)),
+    (
+        "d_month_y",
+        re.compile(
+            rf"(?<![0-9A-Za-z])({_D}{{1,2}})(?:st|nd|rd|th|er|\.)?\s+({_MONTH})\.?\s+({_D}{{4}})(?![0-9])", re.I
+        ),
+    ),
     ("month_d_y", re.compile(rf"\b({_MONTH})\.?\s+({_D}{{1,2}})(?:st|nd|rd|th)?,?\s+({_D}{{4}})(?![0-9])", re.I)),
 ]
 
@@ -78,11 +130,9 @@ def find_dates(text: str) -> list[tuple[str, date]]:
     return found
 
 
-_NUMBER = rf"(?:{_D}{{1,3}}(?:[.,   ']{_D}{{3}})+|{_D}+)(?:[.,]{_D}{{2}})?"
+_NUMBER = rf"(?:{_D}{{1,3}}(?:[.,\u00a0\u202f ']{_D}{{3}})+|{_D}+)(?:[.,]{_D}{{2}})?"
 _CURRENCY = r"€|EUR|£|GBP"
-_AMOUNT = re.compile(
-    rf"(?P<c1>{_CURRENCY})\s?(?P<n1>{_NUMBER})|(?P<n2>{_NUMBER})\s?(?P<c2>{_CURRENCY})"
-)
+_AMOUNT = re.compile(rf"(?P<c1>{_CURRENCY})\s?(?P<n1>{_NUMBER})|(?P<n2>{_NUMBER})\s?(?P<c2>{_CURRENCY})")
 _CURRENCIES = {"€": "EUR", "EUR": "EUR", "£": "GBP", "GBP": "GBP"}
 
 
