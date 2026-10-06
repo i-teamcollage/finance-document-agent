@@ -82,7 +82,7 @@ def _run_split(ws: Workspace, split: str, llm: LLM) -> tuple[list[dict], dict[st
         result = process(label["id"], ws.text(split, label), llm, refs)
         results[label["id"]] = result
         if llm.mode != "replay":
-            outcome = "straight through" if result.straight_through else f"{result.review_count} field(s) to review"
+            outcome = "straight through" if result.straight_through else f"{result.review_count} to review"
             print(f"  [{number:>3}/{len(labels)}] {label['id']}  {outcome:<24} {result.seconds:6.1f} s", flush=True)
     return labels, results
 
@@ -170,10 +170,11 @@ def cmd_accept(args: argparse.Namespace, ws: Workspace, transport=None) -> int:
         "median_seconds_per_item": round(statistics.median(seconds), 1) if seconds else None,
     }
     report = report_dict(outcomes, meta)
-    write_reports(report, ws.reports if args.split == "test" else ws.reports / args.split, details)
+    report_dir = ws.reports if args.split == "test" else ws.reports / args.split
+    write_reports(report, report_dir, details)
     print()
     print(terminal_table(outcomes))
-    print(f"\n{'PASSED' if report['passed'] else 'FAILED'}: details in {ws.reports}/acceptance.md")
+    print(f"\n{'PASSED' if report['passed'] else 'FAILED'}: details in {report_dir / 'acceptance.md'}")
     return 0 if report["passed"] else 1
 
 

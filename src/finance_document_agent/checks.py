@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 from datetime import date, timedelta
-from decimal import Decimal, InvalidOperation
+from decimal import Decimal
 from typing import Any
 
 from .banking import BankDirectory, bic11, bic_format_ok, iban_is_valid, normalize_iban, repair_iban
@@ -124,13 +124,16 @@ def _document_number(text: str, item: dict[str, Any], candidates: Candidates) ->
     check = _Field("document_number", item)
     value = item["value"].strip()
     compact = re.sub(r"\s+", "", value)
-    if not _quote_found(item.get("quote"), text) or compact not in re.sub(r"\s+", "", item.get("quote") or ""):
+    labelled = [re.sub(r"\s+", "", c) for c in candidates.document_numbers]
+    quoted = _quote_found(item.get("quote"), text) and compact in re.sub(r"\s+", "", item.get("quote") or "")
+    # A reworded label in the quote is fine when the rules found exactly this number next to its label.
+    if not quoted and compact not in labelled:
         check.problem("quote not found in the document")
     elif re.search(r"\d[OolISBZ]|[OolISBZ]\d", compact):
         check.problem("a letter between digits: likely scan error")
     elif not re.search(r"\d", compact) or not 3 <= len(compact) <= 30:
         check.problem("does not look like a document number")
-    elif candidates.document_numbers and compact not in [re.sub(r"\s+", "", c) for c in candidates.document_numbers]:
+    elif labelled and compact not in labelled:
         check.problem("differs from the number printed next to its label")
     return check.result(value)
 
@@ -185,24 +188,29 @@ def _amount(text: str, item: dict[str, Any], candidates: Candidates) -> FieldRes
     if missing:
         return FieldResult("amount", None, "review", ["not found"], item.get("quote"))
     check = _Field("amount", item)
-    try:
-        value = Decimal(item["value"])
-    except (InvalidOperation, TypeError):
-        check.problem("not a valid amount")
-        return check.result({"value": item["value"], "currency": item.get("currency")})
     currency = item.get("currency")
+    # "8511.31 EUR" is the right amount in the wrong format: keep the number, but only if the code matches.
+    written = re.fullmatch(r"\s*(€|EUR|£|GBP)?\s*(\d+\.\d{2})\s*(€|EUR|£|GBP)?\s*", str(item["value"]))
+    codes = {"€": "EUR", "EUR": "EUR", "£": "GBP", "GBP": "GBP"}
+    if written is None or any(code and codes[code] != currency for code in (written.group(1), written.group(3))):
+        check.problem("not a valid amount")
+        return check.result({"value": item["value"], "currency": currency})
+    value = Decimal(written.group(2))
     reported = {"value": f"{value:.2f}", "currency": currency}
-    if not re.fullmatch(r"\d+\.\d{2}", item["value"]):
-        check.problem("amount must have two decimals")
     distinct_totals = {(total, cur) for total, cur in candidates.labelled_totals}
     if len(distinct_totals) > 1:
         check.problem("two different totals in the document")
     if not _quote_found(item.get("quote"), text):
         check.problem("quote not found in the document")
     else:
-        quoted = parse_amount(item["quote"]) or next(iter((v, c) for _, v, c in find_amounts(item["quote"])), None)
-        if quoted != (value, currency):
-            check.problem(f"the quoted text reads {quoted[0]} {quoted[1]}" if quoted else "no amount in the quote")
+        # The quote may be a whole sentence with several amounts; the reported one must be among them.
+        in_quote = [(v, c) for _, v, c in find_amounts(item["quote"])]
+        whole = parse_amount(item["quote"])
+        if whole:
+            in_quote.append(whole)
+        if (value, currency) not in in_quote:
+            first = in_quote[0] if in_quote else None
+            check.problem(f"the quoted text reads {first[0]} {first[1]}" if first else "no amount in the quote")
     if candidates.has_vat_breakdown:
         amounts = [v for _, v, c in candidates.amounts if c == currency]
         if not any(a + b == value for i, a in enumerate(amounts) for b in amounts[i + 1 :]):
@@ -224,7 +232,7 @@ def _iban(
     check = _Field("iban", item)
     value = normalize_iban(item["value"])
     suggestion = None
-    if not _quote_found(item.get("quote"), text) or normalize_iban(item.get("quote") or "") != value:
+    if not _quote_found(item.get("quote"), text) or value not in normalize_iban(item.get("quote") or ""):
         check.problem("quote not found in the document")
     if not iban_is_valid(value):
         repairs = repair_iban(value, refs.directory)

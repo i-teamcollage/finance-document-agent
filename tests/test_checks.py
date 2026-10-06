@@ -106,6 +106,38 @@ def test_due_date_before_the_document_date_goes_to_review():
     assert "before the document date" in results["due_date"].reasons[0]
 
 
+def test_amount_written_with_its_currency_code_is_still_checked_and_accepted():
+    results = run(amount={"value": "1190.00 EUR", "currency": "EUR", "quote": "1.190,00 €"})
+    assert results["amount"].status == "auto"
+    assert results["amount"].value == {"value": "1190.00", "currency": "EUR"}
+
+
+def test_amount_with_a_different_currency_code_inside_the_value_goes_to_review():
+    results = run(amount={"value": "1190.00 GBP", "currency": "EUR", "quote": "1.190,00 €"})
+    assert results["amount"].status == "review"
+
+
+def test_amount_quoted_inside_a_longer_sentence_is_accepted_when_the_sentence_contains_it():
+    text = TEXT.replace(
+        "Bankverbindung",
+        "Die erste Rate über 1.000,00 € zzgl. 19 % USt (190,00 €), insgesamt 1.190,00 €, ist fällig.\n\nBankverbindung",
+    )
+    quote = "Die erste Rate über 1.000,00 € zzgl. 19 % USt (190,00 €), insgesamt 1.190,00 €"
+    results = run(text, amount={"value": "1190.00", "currency": "EUR", "quote": quote})
+    assert results["amount"].status == "auto"
+
+
+def test_document_number_with_a_reworded_label_is_accepted_when_the_rules_found_the_same_number():
+    results = run(document_number={"value": "RE-2026-0412", "quote": "Rechnungs-Nr.: RE-2026-0412"})
+    assert results["document_number"].status == "auto"
+
+
+def test_document_number_that_the_rules_did_not_find_still_needs_its_quote():
+    text = TEXT.replace("Rechnungsnummer: RE-2026-0412", "Belegnummer RE-2026-0412")
+    results = run(text, document_number={"value": "RE-2026-0412", "quote": "Beleg-Nr. RE-2026-0412"})
+    assert results["document_number"].status == "review"
+
+
 def test_totals_that_do_not_add_up_go_to_review():
     text = TEXT.replace("Rechnungsbetrag          1.190,00 €", "Rechnungsbetrag          1.290,00 €")
     results = run(text, amount={"value": "1290.00", "currency": "EUR", "quote": "1.290,00 €"})
@@ -120,6 +152,17 @@ def test_two_different_totals_go_to_review():
     results = run(text)
     assert results["amount"].status == "review"
     assert "two different totals" in results["amount"].reasons[0]
+
+
+def test_iban_quoted_together_with_its_label_is_accepted():
+    results = run(iban={"value": "DE89370400440532013000", "quote": "IBAN: DE89 3704 0044 0532 0130 00"})
+    assert results["iban"].status == "auto"
+
+
+def test_iban_that_differs_from_its_quote_goes_to_review():
+    text = TEXT.replace("0532 0130 00", "0532 O130 00")
+    results = run(text, iban={"value": "DE89370400440532013000", "quote": "IBAN: DE89 3704 0044 0532 O130 00"})
+    assert results["iban"].status == "review"
 
 
 def test_wrong_check_digits_go_to_review():

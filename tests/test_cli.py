@@ -83,6 +83,12 @@ def test_card_counts_fields_in_plain_english():
     assert card("t", two).endswith("goes to a reviewer (2 fields)")
 
 
+def test_practice_report_location_is_named_correctly(tmp_path, capsys):
+    root = workspace(tmp_path)
+    main(["accept", "--split", "practice", "--record"], root=root, transport=PerfectReader(root / "data", "practice"))
+    assert f"{root / 'reports' / 'practice' / 'acceptance.md'}" in capsys.readouterr().out
+
+
 def test_replay_without_a_stored_run_explains_what_to_do(tmp_path):
     root = workspace(tmp_path)
     assert main(["accept"], root=root) == 2

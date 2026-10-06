@@ -3,7 +3,7 @@
 Reads invoices, payment requests and contracts in English, French and German, and accepts a field only
 when the code can prove it. Everything else goes to a person, with the reason.
 
-[![acceptance](https://github.com/iteamcollage/finance-document-agent/actions/workflows/acceptance.yml/badge.svg)](https://github.com/iteamcollage/finance-document-agent/actions/workflows/acceptance.yml)
+[![acceptance](https://github.com/i-teamcollage/finance-document-agent/actions/workflows/acceptance.yml/badge.svg)](https://github.com/i-teamcollage/finance-document-agent/actions/workflows/acceptance.yml)
 ![license MIT](https://img.shields.io/badge/license-MIT-blue)
 ![model Ministral 3 8B](https://img.shields.io/badge/model-Ministral%203%208B%2C%20local-6f42c1)
 
@@ -84,7 +84,7 @@ No model and no packages are needed. The repository stores one real run, and rep
 the agent's own code (rules, checks, scoring) against the model's recorded answers.
 
 ```bash
-git clone https://github.com/iteamcollage/finance-document-agent
+git clone https://github.com/i-teamcollage/finance-document-agent
 cd finance-document-agent
 make demo      # three documents, explained
 make accept    # the full acceptance test
