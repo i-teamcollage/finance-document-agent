@@ -1,0 +1,94 @@
+{
+  "title": "Finance document agent: acceptance test",
+  "split": "test",
+  "items": 80,
+  "model": "ministral-3:8b",
+  "machine": "Apple M4, 16 GB",
+  "recorded_at": "2026-10-06",
+  "ollama_version": "0.35.1",
+  "model_digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+  "median_seconds_per_item": 28.2,
+  "criteria": [
+    {
+      "id": "bank_auto_precision",
+      "label": "Bank details accepted automatically that are correct",
+      "metric": "bank_auto_precision",
+      "op": ">=",
+      "target": 0.99,
+      "unit": "rate",
+      "value": 1.0,
+      "hits": 133,
+      "total": 133,
+      "interval": [
+        0.9719266655753804,
+        0.9999999999999998
+      ],
+      "passed": true
+    },
+    {
+      "id": "field_auto_precision",
+      "label": "All fields accepted automatically that are correct",
+      "metric": "field_auto_precision",
+      "op": ">=",
+      "target": 0.98,
+      "unit": "rate",
+      "value": 1.0,
+      "hits": 522,
+      "total": 522,
+      "interval": [
+        0.9926943779267371,
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "field_recall",
+      "label": "Fields found correctly, whether accepted or sent to review",
+      "metric": "field_recall",
+      "op": ">=",
+      "target": 0.95,
+      "unit": "rate",
+      "value": 0.9892857142857143,
+      "hits": 554,
+      "total": 560,
+      "interval": [
+        0.9768235459651164,
+        0.9950806200276021
+      ],
+      "passed": true
+    },
+    {
+      "id": "straight_through",
+      "label": "Documents fully processed with no human touch",
+      "metric": "straight_through",
+      "op": ">=",
+      "target": 0.7,
+      "unit": "rate",
+      "value": 0.7,
+      "hits": 56,
+      "total": 80,
+      "interval": [
+        0.5923163971203269,
+        0.789355708373843
+      ],
+      "passed": true
+    },
+    {
+      "id": "trap_review",
+      "label": "Trap documents sent to review",
+      "metric": "trap_review",
+      "op": "==",
+      "target": 1.0,
+      "unit": "rate",
+      "value": 1.0,
+      "hits": 8,
+      "total": 8,
+      "interval": [
+        0.6755843804891231,
+        1.0
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -44,8 +44,19 @@ The acceptance test was written before the agent was built. It runs on 80 made-u
 was never tuned on.
 
 <!-- results:start -->
-Not measured yet.
+| Criterion | Target | Measured | 95% interval | Result |
+|---|---|---|---|---|
+| Bank details accepted automatically that are correct | ≥ 99% | 100.0% | 97.2–100.0% | PASS |
+| All fields accepted automatically that are correct | ≥ 98% | 100.0% | 99.3–100.0% | PASS |
+| Fields found correctly, whether accepted or sent to review | ≥ 95% | 98.9% | 97.7–99.5% | PASS |
+| Documents fully processed with no human touch | ≥ 70% | 70.0% | 59.2–78.9% | PASS |
+| Trap documents sent to review | = 100% | 100.0% | 67.6–100.0% | PASS |
+
+80 made-up test cases, ministral-3:8b on Apple M4, 16 GB, recorded 2026-10-06, median 28.2 s per item.
 <!-- results:end -->
+
+A document that does not go straight through reaches a reviewer with a stated reason: scan damage in a
+bank detail or a document number, a trap, or a supplier missing from the vendor master.
 
 The trap documents are the point of the test. Every one of them must reach a person:
 
